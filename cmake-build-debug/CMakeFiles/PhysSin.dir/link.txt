@@ -1,0 +1,3 @@
+"E:\programms\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\PhysSin.dir/objects.a
+D:\mingw64\bin\ar.exe cr CMakeFiles\PhysSin.dir/objects.a @CMakeFiles\PhysSin.dir\objects1.rsp
+D:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\PhysSin.dir/objects.a -Wl,--no-whole-archive -o PhysSin.exe -Wl,--out-implib,libPhysSin.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\PhysSin.dir\linklibs.rsp

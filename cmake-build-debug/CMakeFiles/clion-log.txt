@@ -1,0 +1,5 @@
+"E:\programms\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" C:\Users\tucha\Desktop\C_source\PhysSim
+-- Found SFML .. in C:/SFML/include
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/tucha/Desktop/C_source/PhysSim/cmake-build-debug
