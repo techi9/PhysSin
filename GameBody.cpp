@@ -3,6 +3,7 @@
 #include "math.h"
 #include "iostream"
 
+//#define gravity -0.0001
 #define gravity -0.0001
 #define sizeX 256
 #define sizeY 128
@@ -33,7 +34,7 @@ public:
         applyRotation(1);
     }
 
-    void applyRotation(float angle){
+    void applyRotation(float angle){// TODO: change points only on draw
 
         for(int i = 0; i < m_rect.getPointCount(); i++) {
             float tempX = m_rect.getPoint(i).x ;
@@ -44,15 +45,33 @@ public:
 
     }
 
-    void applyForce(){}//TODO: implement
+    void applyForce(sf::Vector2f point, sf::Vector2f vec){
+        if(point.x < 0){
+            m_w -= sqrt(point.x*point.x + point.y*point.y) * sqrt(vec.x*vec.x + vec.y*vec.y);
+        }
+        else{
+            m_w += sqrt(point.x*point.x + point.y*point.y) * sqrt(vec.x*vec.x + vec.y*vec.y);
+        }
+
+        speed = sf::Vector2f(speed.x + vec.x, speed.y + vec.y);
+
+    }
+
     void bounce(int indexOfVertex){
 
     }
+
     void update(){
+
+        //drag
+        m_w = 0.9995 * m_w;
+
         for(int i = 0; i < m_rect.getPointCount(); i++) {
            // cout<<"Y="<<(pos + m_rect.getPoint(i)).y<<endl;
             if ((pos + m_rect.getPoint(i)).y <= 0) {
-                bounce(i);
+                pos.y += 0.1;
+                speed.y = 0;
+                speed.x = speed.x * 0.9995;
             }
         }
 

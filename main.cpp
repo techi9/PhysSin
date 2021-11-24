@@ -9,7 +9,9 @@ void onUpdate(sf::RenderWindow window, GameBody Body){
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Springs =_=");
-
+    sf::View view = window.getDefaultView();
+    view.setSize(800, -600);
+    window.setView(view);
     GameBody Body(sf::Vector2f(300,300),sf::Vector2f(0,0));
     while (window.isOpen())
     {
@@ -24,7 +26,11 @@ int main() {
             {
                 if (event.key.code == sf::Keyboard::A)
                 {
-                    Body.applyRotation(-0.01);
+                    Body.applyForce(sf::Vector2f(0.01,0), sf::Vector2f(0,0.01));
+                }
+                if (event.key.code == sf::Keyboard::D)
+                {
+                    Body.applyForce(sf::Vector2f(-0.01,0), sf::Vector2f(0,0.01));
                 }
 
             }
