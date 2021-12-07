@@ -17,7 +17,7 @@ public:
     Vector2f speed;
     Vector2f pos;
     float m_w = 0;
-    float r_m = 4.0/3.0 * sizeX * sizeY * (sizeX^2 + sizeY^2) * 1; //
+    float r_m = 4.0/3.0 * sizeX * sizeY * (sizeX^2 + sizeY^2) * 1; // rotational mass
     vector<pair<float,float>> collisionPoints;
 
     GameBody(Vector2f startPos, Vector2f startSpeed){
