@@ -26,11 +26,11 @@ int main() {
             {
                 if (event.key.code == sf::Keyboard::A)
                 {
-                    Body.applyForce(sf::Vector2f(0.01,0), sf::Vector2f(0,0.01));
+                    Body.applyForce(sf::Vector2f(10,0), sf::Vector2f(0,0.01));
                 }
                 if (event.key.code == sf::Keyboard::D)
                 {
-                    Body.applyForce(sf::Vector2f(-0.01,0), sf::Vector2f(0,0.01));
+                    Body.applyForce(sf::Vector2f(-10,0), sf::Vector2f(0,0.01));
                 }
 
             }

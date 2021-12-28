@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PhysSin.dir/GameBody.cpp.obj"
   "CMakeFiles/PhysSin.dir/main.cpp.obj"
+  "CMakeFiles/PhysSin.dir/spring.cpp.obj"
   "PhysSin.exe"
   "PhysSin.exe.manifest"
   "PhysSin.pdb"

@@ -4,20 +4,37 @@
 #include "string"
 #include "math.h"
 #include "SFML/Graphics.hpp"
+#include "iostream"
 
 using namespace std;
 using sf::Vector2f;
 
 class spring : public sf::Drawable{
+
+
+
+    sf::RectangleShape line;
+
     Vector2f pos;
     double length = 60;
-    double curLength = 60;
-    spring(double offset);
-    void update(sf::Vector2f newPos);
-    sf::Vector2f getForce();
+
+
+
+
 
 public:
+    sf::Vector2f getForce();
+    spring(int offsetFromCenter, sf::Vector2f p);
+    double curLength = 60;
+    void update(sf::Vector2f newPos);
     double offset;
+
+
+private:
+    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
+    {
+        target.draw(line, states);
+    }
 };
 
 
