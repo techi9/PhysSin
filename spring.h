@@ -11,22 +11,18 @@ using sf::Vector2f;
 
 class spring : public sf::Drawable{
 
-
-
-    sf::RectangleShape line;
+    float k = 0.0005;
 
     Vector2f pos;
-    double length = 60;
-
-
-
+    double length = 80;
 
 
 public:
+    sf::RectangleShape line;
     sf::Vector2f getForce();
     spring(int offsetFromCenter, sf::Vector2f p);
-    double curLength = 60;
-    void update(sf::Vector2f newPos);
+    double curLength = 80;
+    float update(sf::Vector2f newPos, float ang);
     double offset;
 
 

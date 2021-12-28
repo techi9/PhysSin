@@ -23,10 +23,12 @@ public:
     Vector2f speed;
     Vector2f pos;
     float m_w = 0;
+    sf::Vector2f pointSp1;
+    sf::Vector2f pointSp2;
     float r_m = 4.0/3.0 * sizeX * sizeY * (sizeX^2 + sizeY^2) * 1; // rotational mass
     vector<pair<float,float>> collisionPoints;
 
-    GameBody(Vector2f startPos, Vector2f startSpeed): sp1(10,startPos), sp2(-10, startPos){
+    GameBody(Vector2f startPos, Vector2f startSpeed): sp1(70,startPos), sp2(-70, startPos){
 
 
         speed = startSpeed;
@@ -37,6 +39,12 @@ public:
         m_rect.setPoint(1, Vector2f(sizeX / 2.0, -sizeY / 2.0));
         m_rect.setPoint(2, Vector2f(-sizeX / 2.0, -sizeY / 2.0));
         m_rect.setPoint(3, Vector2f(-sizeX/ 2.0, sizeY / 2.0));
+
+        pointSp1.x = sizeX/2 - 40;
+        pointSp1.y = -sizeY/2;
+        pointSp2.x = -sizeX/2 + 40;
+        pointSp2.y = -sizeY/2;
+
 
 
     }
@@ -49,6 +57,8 @@ public:
             m_rect.setPoint(i,Vector2f(tempX*cos(angle) - tempY*sin(angle), tempX*sin(angle) + tempY*cos(angle)));
         }
 
+        pointSp1=sf::Vector2f (pointSp1.x*cos(angle) - pointSp1.y*sin(angle), pointSp1.x*sin(angle)  + pointSp1.y*cos(angle));
+        pointSp2=sf::Vector2f (pointSp2.x*cos(angle) - pointSp2.y*sin(angle), pointSp2.x*sin(angle)  + pointSp2.y*cos(angle));
 
     }
 
@@ -74,9 +84,11 @@ public:
         m_w = 0.9995 * m_w;
         double h = 0.003;
 
+
+
         for(int i = 0; i < m_rect.getPointCount(); i++) {
            // cout<<"Y="<<(pos + m_rect.getPoint(i)).y<<endl;
-            if ((pos + m_rect.getPoint(i)).y <= 0) {
+            if ((pos + m_rect.getPoint(i)).y <= 50) {
                 pos.y += 0.1;
                 speed.y = 0;
                 speed.x = speed.x * 0.9995;
@@ -91,8 +103,12 @@ public:
         pos.y += h*speed.y * 0.5;
         applyRotation(h*m_w);
 
-        sp1.update(pos);
-        sp2.update(pos);
+
+        sf::Vector2f vecSp1(0 ,sp1.update(sf::Vector2f(pos.x+ pointSp1.x, pos.y + pointSp1.y),h* m_w));
+        sf::Vector2f vecSp2(0,sp2.update(sf::Vector2f(pos.x+ pointSp2.x, pos.y + pointSp2.y),h* m_w));
+
+        applyForce(sf::Vector2f(0.01, 0), vecSp1);
+        applyForce(sf::Vector2f(-0.01, 0), vecSp2);
 
         m_rect.setPosition(pos.x, pos.y);
     }
@@ -101,7 +117,7 @@ private:
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
     {
         target.draw(m_rect, states);
-        target.draw(sp1, states);
-        target.draw(sp2, states);
+        target.draw(sp1.line, states);
+        target.draw(sp2.line, states);
     }
 };
