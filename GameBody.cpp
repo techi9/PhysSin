@@ -4,6 +4,7 @@
 #include "iostream"
 #include "spring.h"
 //#define gravity -0.0001
+#define h 0.003
 #define gravity -9.8
 #define sizeX 256
 #define sizeY 128
@@ -25,7 +26,7 @@ public:
     float m_w = 0;
     sf::Vector2f pointSp1;
     sf::Vector2f pointSp2;
-    float r_m = 4.0/3.0 * sizeX * sizeY * (sizeX^2 + sizeY^2) * 1; // rotational mass
+    float r_m = (1.0/12.0) * (sizeX*sizeX + sizeY*sizeY) * 1; // rotational mass
     vector<pair<float,float>> collisionPoints;
 
     GameBody(Vector2f startPos, Vector2f startSpeed): sp1(70,startPos), sp2(-70, startPos){
@@ -82,9 +83,8 @@ public:
 
         //drag
         m_w = 0.9995 * m_w;
-        double h = 0.003;
 
-
+        cout<<r_m<<'\n';
 
         for(int i = 0; i < m_rect.getPointCount(); i++) {
            // cout<<"Y="<<(pos + m_rect.getPoint(i)).y<<endl;
@@ -95,7 +95,6 @@ public:
             }
         }
 
-//        speed.y += gravity * 0.5;
         pos.x += h*speed.x * 0.5;
         pos.y += h*speed.y * 0.5;
         speed.y += h*gravity;
