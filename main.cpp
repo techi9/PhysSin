@@ -25,17 +25,34 @@ int main() {
                 window.close();
             if (event.type == sf::Event::KeyPressed)
             {
-                if (event.key.code == sf::Keyboard::D)
+                if (event.key.code == sf::Keyboard::A)
                 {
                     Body.applyForce(sf::Vector2f(10,0), sf::Vector2f(0,0.01));
                 }
-                if (event.key.code == sf::Keyboard::A)
+                if (event.key.code == sf::Keyboard::D)
                 {
                     Body.applyForce(sf::Vector2f(-10,0), sf::Vector2f(0,0.01));
+                }
+                if (event.key.code == sf::Keyboard::W)
+                {
+                    Body.speed.x += 1;
+                }
+                if (event.key.code == sf::Keyboard::S)
+                {
+                    Body.speed.x -= 1;
+                }
+                if (event.key.code == sf::Keyboard::Space)
+                {
+                    Body.speed.x = 0;
                 }
 
             }
         }
+
+
+
+
+
         Body.update();
         // Clear screen
         window.clear();

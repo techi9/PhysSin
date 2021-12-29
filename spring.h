@@ -2,7 +2,7 @@
 #define PHYSSIN_SPRING_H
 
 #include "string"
-#include "math.h"
+#include <cmath>
 #include "SFML/Graphics.hpp"
 #include "iostream"
 

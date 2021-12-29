@@ -8,11 +8,11 @@ float spring::update(sf::Vector2f newPos, float ang) {
     pos = newPos;
 
     if(pos.y - curLength < 50){
-        curLength -= 1;
+        curLength -= 0.3;
     }
     else{
         if(curLength<length)
-            curLength += 1;
+            curLength += 0.3;
     }
 
 
