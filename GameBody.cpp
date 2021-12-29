@@ -9,7 +9,7 @@
 #define sizeX 256
 #define sizeY 128
 
-#define kElast 0.5
+#define kElast 1
 using namespace std;
 using sf::Vector2f;
 class GameBody : public sf::Drawable{
@@ -36,12 +36,12 @@ public:
         pos = startPos;
         m_rect.move(pos);
         m_rect.setPointCount(4);
-        m_rect.setPoint(0, Vector2f(sizeX / 2.0, sizeY / 2.0 ));
+        m_rect.setPoint(0, Vector2f(sizeX / 2.0, sizeY / 2.0 )); // локальные координаты
         m_rect.setPoint(1, Vector2f(sizeX / 2.0, -sizeY / 2.0));
         m_rect.setPoint(2, Vector2f(-sizeX / 2.0, -sizeY / 2.0));
         m_rect.setPoint(3, Vector2f(-sizeX/ 2.0, sizeY / 2.0));
 
-        pointSp1.x = sizeX/2 - 40;
+        pointSp1.x = sizeX/2 - 40; // локальные точки крепления пружин
         pointSp1.y = -sizeY/2;
         pointSp2.x = -sizeX/2 + 40;
         pointSp2.y = -sizeY/2;
@@ -65,26 +65,23 @@ public:
 
     void applyForce(sf::Vector2f point, sf::Vector2f vec){
         if(point.x < 0){
-            m_w -=kElast* sqrt(point.x*point.x + point.y*point.y) * sqrt(vec.x*vec.x + vec.y*vec.y);
+            m_w -=(kElast* sqrt(point.x*point.x + point.y*point.y) * sqrt(vec.x*vec.x + vec.y*vec.y)) / r_m;
         }
         else{
-            m_w += kElast* sqrt(point.x*point.x + point.y*point.y) * sqrt(vec.x*vec.x + vec.y*vec.y);
+            m_w += (kElast* sqrt(point.x*point.x + point.y*point.y) * sqrt(vec.x*vec.x + vec.y*vec.y)) / r_m;
         }
 
         speed = sf::Vector2f(speed.x + vec.x, speed.y + vec.y);
 
     }
 
-    void bounce(int indexOfVertex){
-
-    }
 
     void update(){
 
         //drag
         m_w = 0.9995 * m_w;
+        speed.x = 0.9998 * speed.x;
 
-        cout<<r_m<<'\n';
 
         for(int i = 0; i < m_rect.getPointCount(); i++) {
            // cout<<"Y="<<(pos + m_rect.getPoint(i)).y<<endl;
@@ -106,8 +103,8 @@ public:
         sf::Vector2f vecSp1(0 ,sp1.update(sf::Vector2f(pos.x+ pointSp1.x, pos.y + pointSp1.y),h* m_w));
         sf::Vector2f vecSp2(0,sp2.update(sf::Vector2f(pos.x+ pointSp2.x, pos.y + pointSp2.y),h* m_w));
 
-        applyForce(sf::Vector2f(0.01, 0), vecSp1);
-        applyForce(sf::Vector2f(-0.01, 0), vecSp2);
+        applyForce(sf::Vector2f(70, 0), vecSp1);
+        applyForce(sf::Vector2f(-70, 0), vecSp2);
 
         m_rect.setPosition(pos.x, pos.y);
     }

@@ -13,7 +13,7 @@ int main() {
     view.setSize(800, -600);
     window.setView(view);
     GameBody Body(sf::Vector2f(300,300),sf::Vector2f(0,0));
-    window.setFramerateLimit(3000);
+    window.setFramerateLimit(850);
     while (window.isOpen())
     {
         // Process events
@@ -27,11 +27,11 @@ int main() {
             {
                 if (event.key.code == sf::Keyboard::A)
                 {
-                    Body.applyForce(sf::Vector2f(10,0), sf::Vector2f(0,0.01));
+                    Body.m_w += 0.1;
                 }
                 if (event.key.code == sf::Keyboard::D)
                 {
-                    Body.applyForce(sf::Vector2f(-10,0), sf::Vector2f(0,0.01));
+                    Body.m_w -= 0.1;
                 }
                 if (event.key.code == sf::Keyboard::W)
                 {
