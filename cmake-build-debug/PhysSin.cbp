@@ -88,16 +88,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/GameBody.cpp">
+		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/Body.cpp">
+			<Option target="PhysSin"/>
+		</Unit>
+		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/Body.h">
 			<Option target="PhysSin"/>
 		</Unit>
 		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/main.cpp">
-			<Option target="PhysSin"/>
-		</Unit>
-		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/spring.cpp">
-			<Option target="PhysSin"/>
-		</Unit>
-		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/spring.h">
 			<Option target="PhysSin"/>
 		</Unit>
 		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/CMakeLists.txt">

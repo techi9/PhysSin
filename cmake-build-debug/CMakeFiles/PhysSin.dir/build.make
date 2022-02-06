@@ -79,46 +79,30 @@ CMakeFiles/PhysSin.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhysSin.dir/main.cpp.s"
 	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tucha\Desktop\C_source\PhysSim\main.cpp -o CMakeFiles\PhysSin.dir\main.cpp.s
 
-CMakeFiles/PhysSin.dir/GameBody.cpp.obj: CMakeFiles/PhysSin.dir/flags.make
-CMakeFiles/PhysSin.dir/GameBody.cpp.obj: CMakeFiles/PhysSin.dir/includes_CXX.rsp
-CMakeFiles/PhysSin.dir/GameBody.cpp.obj: ../GameBody.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tucha\Desktop\C_source\PhysSim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PhysSin.dir/GameBody.cpp.obj"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PhysSin.dir\GameBody.cpp.obj -c C:\Users\tucha\Desktop\C_source\PhysSim\GameBody.cpp
+CMakeFiles/PhysSin.dir/Body.cpp.obj: CMakeFiles/PhysSin.dir/flags.make
+CMakeFiles/PhysSin.dir/Body.cpp.obj: CMakeFiles/PhysSin.dir/includes_CXX.rsp
+CMakeFiles/PhysSin.dir/Body.cpp.obj: ../Body.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tucha\Desktop\C_source\PhysSim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PhysSin.dir/Body.cpp.obj"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PhysSin.dir\Body.cpp.obj -c C:\Users\tucha\Desktop\C_source\PhysSim\Body.cpp
 
-CMakeFiles/PhysSin.dir/GameBody.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhysSin.dir/GameBody.cpp.i"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tucha\Desktop\C_source\PhysSim\GameBody.cpp > CMakeFiles\PhysSin.dir\GameBody.cpp.i
+CMakeFiles/PhysSin.dir/Body.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhysSin.dir/Body.cpp.i"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tucha\Desktop\C_source\PhysSim\Body.cpp > CMakeFiles\PhysSin.dir\Body.cpp.i
 
-CMakeFiles/PhysSin.dir/GameBody.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhysSin.dir/GameBody.cpp.s"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tucha\Desktop\C_source\PhysSim\GameBody.cpp -o CMakeFiles\PhysSin.dir\GameBody.cpp.s
-
-CMakeFiles/PhysSin.dir/spring.cpp.obj: CMakeFiles/PhysSin.dir/flags.make
-CMakeFiles/PhysSin.dir/spring.cpp.obj: CMakeFiles/PhysSin.dir/includes_CXX.rsp
-CMakeFiles/PhysSin.dir/spring.cpp.obj: ../spring.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\tucha\Desktop\C_source\PhysSim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PhysSin.dir/spring.cpp.obj"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\PhysSin.dir\spring.cpp.obj -c C:\Users\tucha\Desktop\C_source\PhysSim\spring.cpp
-
-CMakeFiles/PhysSin.dir/spring.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhysSin.dir/spring.cpp.i"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\tucha\Desktop\C_source\PhysSim\spring.cpp > CMakeFiles\PhysSin.dir\spring.cpp.i
-
-CMakeFiles/PhysSin.dir/spring.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhysSin.dir/spring.cpp.s"
-	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tucha\Desktop\C_source\PhysSim\spring.cpp -o CMakeFiles\PhysSin.dir\spring.cpp.s
+CMakeFiles/PhysSin.dir/Body.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhysSin.dir/Body.cpp.s"
+	D:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\tucha\Desktop\C_source\PhysSim\Body.cpp -o CMakeFiles\PhysSin.dir\Body.cpp.s
 
 # Object files for target PhysSin
 PhysSin_OBJECTS = \
 "CMakeFiles/PhysSin.dir/main.cpp.obj" \
-"CMakeFiles/PhysSin.dir/GameBody.cpp.obj" \
-"CMakeFiles/PhysSin.dir/spring.cpp.obj"
+"CMakeFiles/PhysSin.dir/Body.cpp.obj"
 
 # External object files for target PhysSin
 PhysSin_EXTERNAL_OBJECTS =
 
 PhysSin.exe: CMakeFiles/PhysSin.dir/main.cpp.obj
-PhysSin.exe: CMakeFiles/PhysSin.dir/GameBody.cpp.obj
-PhysSin.exe: CMakeFiles/PhysSin.dir/spring.cpp.obj
+PhysSin.exe: CMakeFiles/PhysSin.dir/Body.cpp.obj
 PhysSin.exe: CMakeFiles/PhysSin.dir/build.make
 PhysSin.exe: C:/SFML/lib/libsfml-system-d.a
 PhysSin.exe: C:/SFML/lib/libsfml-window-d.a
@@ -128,7 +112,7 @@ PhysSin.exe: C:/SFML/lib/libsfml-audio-d.a
 PhysSin.exe: CMakeFiles/PhysSin.dir/linklibs.rsp
 PhysSin.exe: CMakeFiles/PhysSin.dir/objects1.rsp
 PhysSin.exe: CMakeFiles/PhysSin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tucha\Desktop\C_source\PhysSim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable PhysSin.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\tucha\Desktop\C_source\PhysSim\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable PhysSin.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\PhysSin.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

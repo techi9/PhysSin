@@ -10,19 +10,17 @@ using namespace std;
 using sf::Vector2f;
 
 class spring : public sf::Drawable{
-
-    float k = 0.0005;
+public:
+    float k = 0.5;
 
     Vector2f pos;
     double length = 80;
 
-
-public:
     sf::RectangleShape line;
-    sf::Vector2f getForce();
     spring(int offsetFromCenter, sf::Vector2f p);
+    spring() = default;
     double curLength = 80;
-    float update(sf::Vector2f newPos, float ang);
+    float update(sf::Vector2f newPos, float ang, bool conserveState, double& curlength);
     double offset;
 
 

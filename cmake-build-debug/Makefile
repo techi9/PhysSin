@@ -128,29 +128,29 @@ PhysSin/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/build
 .PHONY : PhysSin/fast
 
-GameBody.obj: GameBody.cpp.obj
-.PHONY : GameBody.obj
+Body.obj: Body.cpp.obj
+.PHONY : Body.obj
 
 # target to build an object file
-GameBody.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/GameBody.cpp.obj
-.PHONY : GameBody.cpp.obj
+Body.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/Body.cpp.obj
+.PHONY : Body.cpp.obj
 
-GameBody.i: GameBody.cpp.i
-.PHONY : GameBody.i
+Body.i: Body.cpp.i
+.PHONY : Body.i
 
 # target to preprocess a source file
-GameBody.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/GameBody.cpp.i
-.PHONY : GameBody.cpp.i
+Body.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/Body.cpp.i
+.PHONY : Body.cpp.i
 
-GameBody.s: GameBody.cpp.s
-.PHONY : GameBody.s
+Body.s: Body.cpp.s
+.PHONY : Body.s
 
 # target to generate assembly for a file
-GameBody.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/GameBody.cpp.s
-.PHONY : GameBody.cpp.s
+Body.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/Body.cpp.s
+.PHONY : Body.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -176,30 +176,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-spring.obj: spring.cpp.obj
-.PHONY : spring.obj
-
-# target to build an object file
-spring.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/spring.cpp.obj
-.PHONY : spring.cpp.obj
-
-spring.i: spring.cpp.i
-.PHONY : spring.i
-
-# target to preprocess a source file
-spring.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/spring.cpp.i
-.PHONY : spring.cpp.i
-
-spring.s: spring.cpp.s
-.PHONY : spring.s
-
-# target to generate assembly for a file
-spring.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/spring.cpp.s
-.PHONY : spring.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -209,15 +185,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... PhysSin
-	@echo ... GameBody.obj
-	@echo ... GameBody.i
-	@echo ... GameBody.s
+	@echo ... Body.obj
+	@echo ... Body.i
+	@echo ... Body.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... spring.obj
-	@echo ... spring.i
-	@echo ... spring.s
 .PHONY : help
 
 

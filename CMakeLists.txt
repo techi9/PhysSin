@@ -4,7 +4,7 @@ project(PhysSin)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(PhysSin main.cpp GameBody.cpp spring.cpp spring.h)
+add_executable(PhysSin main.cpp Body.cpp Body.h)
 
 include_directories(headers /usr/include c:/SFML/include)
 

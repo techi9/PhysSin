@@ -1,25 +1,25 @@
-//
-// Created by tucha on 07.12.2021.
-//
-
 #include "spring.h"
 
-float spring::update(sf::Vector2f newPos, float ang) {
+float spring::update(sf::Vector2f newPos, float ang, bool conserveState, double& curLength) {  //changes pos, cur length
     pos = newPos;
 
     if(pos.y - curLength < 50){
-        curLength -= 0.3;
+        curLength -= 20;
     }
     else{
         if(curLength<length)
-            curLength += 0.3;
+            curLength += 20;
     }
-
+    cout<<curLength<<endl;
 
     line.setPosition(pos.x, pos.y);
     line.setSize(sf::Vector2f(curLength, 15));
     ang *= 180/M_PI;
-    line.rotate(ang);
+
+    if (!conserveState){
+        line.rotate(ang);
+    }
+
 
     return k*(length-curLength);
 }

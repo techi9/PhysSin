@@ -1,19 +1,28 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "GameBody.cpp"
+#include "Body.h"
 using namespace std;
 
-void onUpdate(sf::RenderWindow window, GameBody Body){
-
-}
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Springs =_=");
     sf::View view = window.getDefaultView();
     view.setSize(800, -600);
     window.setView(view);
-    GameBody Body(sf::Vector2f(300,300),sf::Vector2f(0,0));
-    window.setFramerateLimit(850);
+
+
+    State state, dx;
+    dx.sp1Length = 0;
+    dx.sp2Length = 0;
+    state.pos = Vector2f(400, 300);
+
+    Body body;
+    dx = body.f(state);
+    state.add(dx);
+
+
+
+    window.setFramerateLimit(144);
     while (window.isOpen())
     {
         // Process events
@@ -27,23 +36,23 @@ int main() {
             {
                 if (event.key.code == sf::Keyboard::A)
                 {
-                    Body.m_w += 0.1;
+
                 }
                 if (event.key.code == sf::Keyboard::D)
                 {
-                    Body.m_w -= 0.1;
+
                 }
                 if (event.key.code == sf::Keyboard::W)
                 {
-                    Body.speed.x += 1;
+
                 }
                 if (event.key.code == sf::Keyboard::S)
                 {
-                    Body.speed.x -= 1;
+
                 }
                 if (event.key.code == sf::Keyboard::Space)
                 {
-                    Body.speed.x = 0;
+
                 }
 
             }
@@ -52,12 +61,11 @@ int main() {
 
 
 
-
-        Body.update();
         // Clear screen
         window.clear();
         // Draw the sprite
-        window.draw(Body);
+//        window.draw(Body);
+
         // Update the window
         window.display();
     }
