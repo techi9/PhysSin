@@ -1,6 +1,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Body.h"
+#include "RungeeKutta4.h"
 using namespace std;
 
 
@@ -10,15 +11,16 @@ int main() {
     view.setSize(800, -600);
     window.setView(view);
 
+    const float h = 0.05;
 
-    State state, dx;
-    dx.sp1Length = 0;
-    dx.sp2Length = 0;
-    state.pos = Vector2f(400, 300);
+    State state;
+    state.pos = Vector2f(400, 200);
+    state.sp1Length = 80;
+    state.sp2Length = 80;
 
     Body body;
-    dx = body.f(state);
-    state.add(dx);
+    RungeeKutta4 rg4;
+
 
 
 
@@ -36,35 +38,38 @@ int main() {
             {
                 if (event.key.code == sf::Keyboard::A)
                 {
-
+                    state.w += 0.01;
                 }
                 if (event.key.code == sf::Keyboard::D)
                 {
-
+                    state.w += -0.01;
                 }
                 if (event.key.code == sf::Keyboard::W)
                 {
-
+                    state.speed.x += 5;
                 }
                 if (event.key.code == sf::Keyboard::S)
                 {
-
+                    state.speed.x -= 5;
                 }
                 if (event.key.code == sf::Keyboard::Space)
                 {
-
+                    state.speed.x = 0;
                 }
 
             }
         }
 
 
+        State dx;
+        dx = rg4.solve(body, state, h); // body - это объект содержащий функцию f(), state - состояние системы и h шаг.
+        state.add(dx);
 
 
         // Clear screen
         window.clear();
         // Draw the sprite
-//        window.draw(Body);
+        window.draw(state);
 
         // Update the window
         window.display();

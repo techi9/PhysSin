@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/tucha/Desktop/C_source/PhysSim/Body.cpp" "C:/Users/tucha/Desktop/C_source/PhysSim/cmake-build-debug/CMakeFiles/PhysSin.dir/Body.cpp.obj"
+  "C:/Users/tucha/Desktop/C_source/PhysSim/RungeeKutta4.cpp" "C:/Users/tucha/Desktop/C_source/PhysSim/cmake-build-debug/CMakeFiles/PhysSin.dir/RungeeKutta4.cpp.obj"
   "C:/Users/tucha/Desktop/C_source/PhysSim/main.cpp" "C:/Users/tucha/Desktop/C_source/PhysSim/cmake-build-debug/CMakeFiles/PhysSin.dir/main.cpp.obj"
+  "C:/Users/tucha/Desktop/C_source/PhysSim/stateVisualizer.cpp" "C:/Users/tucha/Desktop/C_source/PhysSim/cmake-build-debug/CMakeFiles/PhysSin.dir/stateVisualizer.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

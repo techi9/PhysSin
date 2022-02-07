@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PhysSin.dir/Body.cpp.obj"
+  "CMakeFiles/PhysSin.dir/RungeeKutta4.cpp.obj"
   "CMakeFiles/PhysSin.dir/main.cpp.obj"
+  "CMakeFiles/PhysSin.dir/stateVisualizer.cpp.obj"
   "PhysSin.exe"
   "PhysSin.exe.manifest"
   "PhysSin.pdb"

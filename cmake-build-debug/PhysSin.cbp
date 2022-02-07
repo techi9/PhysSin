@@ -94,7 +94,19 @@
 		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/Body.h">
 			<Option target="PhysSin"/>
 		</Unit>
+		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/RungeeKutta4.cpp">
+			<Option target="PhysSin"/>
+		</Unit>
+		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/RungeeKutta4.h">
+			<Option target="PhysSin"/>
+		</Unit>
+		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/State.h">
+			<Option target="PhysSin"/>
+		</Unit>
 		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/main.cpp">
+			<Option target="PhysSin"/>
+		</Unit>
+		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/stateVisualizer.cpp">
 			<Option target="PhysSin"/>
 		</Unit>
 		<Unit filename="C:/Users/tucha/Desktop/C_source/PhysSim/CMakeLists.txt">

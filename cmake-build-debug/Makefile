@@ -152,6 +152,30 @@ Body.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/Body.cpp.s
 .PHONY : Body.cpp.s
 
+RungeeKutta4.obj: RungeeKutta4.cpp.obj
+.PHONY : RungeeKutta4.obj
+
+# target to build an object file
+RungeeKutta4.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/RungeeKutta4.cpp.obj
+.PHONY : RungeeKutta4.cpp.obj
+
+RungeeKutta4.i: RungeeKutta4.cpp.i
+.PHONY : RungeeKutta4.i
+
+# target to preprocess a source file
+RungeeKutta4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/RungeeKutta4.cpp.i
+.PHONY : RungeeKutta4.cpp.i
+
+RungeeKutta4.s: RungeeKutta4.cpp.s
+.PHONY : RungeeKutta4.s
+
+# target to generate assembly for a file
+RungeeKutta4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/RungeeKutta4.cpp.s
+.PHONY : RungeeKutta4.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -176,6 +200,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+stateVisualizer.obj: stateVisualizer.cpp.obj
+.PHONY : stateVisualizer.obj
+
+# target to build an object file
+stateVisualizer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/stateVisualizer.cpp.obj
+.PHONY : stateVisualizer.cpp.obj
+
+stateVisualizer.i: stateVisualizer.cpp.i
+.PHONY : stateVisualizer.i
+
+# target to preprocess a source file
+stateVisualizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/stateVisualizer.cpp.i
+.PHONY : stateVisualizer.cpp.i
+
+stateVisualizer.s: stateVisualizer.cpp.s
+.PHONY : stateVisualizer.s
+
+# target to generate assembly for a file
+stateVisualizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PhysSin.dir\build.make CMakeFiles/PhysSin.dir/stateVisualizer.cpp.s
+.PHONY : stateVisualizer.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -188,9 +236,15 @@ help:
 	@echo ... Body.obj
 	@echo ... Body.i
 	@echo ... Body.s
+	@echo ... RungeeKutta4.obj
+	@echo ... RungeeKutta4.i
+	@echo ... RungeeKutta4.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... stateVisualizer.obj
+	@echo ... stateVisualizer.i
+	@echo ... stateVisualizer.s
 .PHONY : help
 
 
